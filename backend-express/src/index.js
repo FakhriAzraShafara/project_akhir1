@@ -1,8 +1,6 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-dotenv.config();
-
 import middlewareLogRequest from './middleware/logs.js';
 import employeeRoute from './routes/employee.js';
 import scwRoute from './routes/scw.js';
@@ -14,6 +12,13 @@ import jabatanRoute from './routes/jabatan.js';
 import lokasiRoute from './routes/lokasi.js';
 
 const app = express();
+dotenv.config();
+
+//app.<method>('/', (req, res, next){
+
+// handler
+// })
+
 app.use(cors());
 app.use(express.json());
 app.use('/assets', express.static('public/images'))

@@ -25,7 +25,7 @@ const getEmployeeById = async (req, res) => {
 };
 
 const createEmployee = async (req, res) => {
-    const { nama, tgl_lahir, tempat_lahir, jenis_kelamin, email, no_hp, status, alamat, keterangan, departemenId, jabatanId, mesinId } = req.body;
+    const { nama, tgl_lahir, tempat_lahir, jenis_kelamin, email, no_hp, status, alamat, keterangan, departemenId, jabatanId } = req.body;
     try {
         const employee = await prisma.Employee.create({
             data: {
