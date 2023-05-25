@@ -42,3 +42,5 @@ app.use("/lokasi", lokasiRoute);
 app.listen(process.env.APP_PORT, () => {
     console.log("Server is running on Port " + process.env.APP_PORT + "...");
 });
+
+export default app
